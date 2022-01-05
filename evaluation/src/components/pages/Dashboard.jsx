@@ -1,7 +1,17 @@
+import { logoutSuccess } from "../../redux/login/action"
+import { useDispatch } from "react-redux"
+import { Button } from "@material-ui/core"
 const Dashboard = ()=>{
+    const dispatch = useDispatch()
+    const handleLogout = () =>{
+        dispatch(logoutSuccess())
+    }
     return(
         <div>
-            <h2>Dashboard</h2>
+            <div style={{marginTop:"100px"}}>
+                <Button onClick={handleLogout}>Logout</Button>
+                
+            </div>
         </div>
     )
 }

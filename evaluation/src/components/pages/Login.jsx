@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core"
 import { useDispatch } from "react-redux"
 import { loginSuccess } from "../../redux/login/action"
 
@@ -10,8 +11,9 @@ const Login = ()=>{
     }
 
     return(
-        <div>
-            <button onClick={loginUser}>Login</button>
+        <div style={{width:"100px", margin:"auto"}}>
+            {/* <button >Login</button> */}
+            <Button onClick={loginUser}>Login</Button>
         </div>
     )
 }
